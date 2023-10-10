@@ -9,146 +9,1582 @@ const form46ASchema = new mongoose.Schema({
     education_facility: { type: String, required: true },
     type_facility: { type: String, required: true },
   },
+  statusContent: {
+    children_Interventions: { type: String, required: true },
+    Sanction_capacity_Home: { type: String, required: true },
+    number_of_children: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    bathing_sleeping: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    seven_to_eleven_yrs: { type: String, required: true },
+    twelve_to_eighteen: { type: String, required: true },
+    children_0_5: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    children_18_abv: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    care_plans: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    childre_special_needs: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    newAdmissions_cur_month: { type: String, required: true },
+    children_released: { type: String, required: true },
+    "children_referred_CWC/JJB": { type: String, required: true },
+    "children_produced_CWC/JJB": { type: String, required: true },
+    children_prev_mnth: { type: String, required: true },
+    children_spl_needs: { type: String, required: true },
+  },
+
   legalContent: {
-    foreign_contribution_registration: { type: String, required: true },
-    parent_organization_registration: { type: String, required: true },
-    parent_organization_registration_no: { type: String, required: true },
+    foreign_contribution_registration: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+      fileUrl: {
+        type: String,
+      },
+    },
+    parent_organization_registration: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+      fileUrl: {
+        type: String,
+      },
+    },
+    parent_organization_registration_no: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+      fileUrl: {
+        type: String,
+      },
+    },
   },
+
   physicalInfraContent: {
-    access_guidelines: { type: String, required: true },
-    sign_board_displayed: { type: String, required: true },
-    boundary_wall_fencing: { type: String, required: true },
-    classroom: { type: String, required: true },
-    dormitories: { type: String, required: true },
-    kitchen: { type: String, required: true },
-    counseling: { type: String, required: true },
-    recreation: { type: String, required: true },
-    sick_room: { type: String, required: true },
-    library: { type: String, required: true },
-    visitors_room: { type: String, required: true },
-    vocational_training: { type: String, required: true },
-    store: { type: String, required: true },
-    office_room: { type: String, required: true },
-    toilets: { type: String, required: true },
-    good_condition: { type: String, required: true },
-    child_friendly_bathrooms: { type: String, required: true },
-    child_friendly_toilets: { type: String, required: true },
-    drinking_water_storage: { type: String, required: true },
-    drinking_water_provided: { type: String, required: true },
-    garbage_disposal_facilities: { type: String, required: true },
-    dining_hall: { type: String, required: true },
-    bathrooms: { type: String, required: true },
-    record_room: { type: String, required: true },
-    staff_residence: { type: String, required: true },
+    access_guidelines: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    sign_board_displayed: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    boundary_wall_fencing: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    classroom: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    dormitories: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    kitchen: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    counseling: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    recreation: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    sick_room: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    library: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    visitors_room: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    vocational_training: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    store: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    office_room: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    toilets: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    good_condition: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    child_friendly_bathrooms: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    child_friendly_toilets: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    drinking_water_storage: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    drinking_water_provided: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    garbage_disposal_facilities: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    dining_hall: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    bathrooms: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    record_room: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    staff_residence: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
   },
+
   managementContent: {
-    superintendent_manager_incharge: { type: String, required: true },
-    person_in_charge: { type: String, required: true },
-    counselor: { type: String, required: true },
-    child_welfare_officer: { type: String, required: true },
-    house_mother_father: { type: String, required: true },
-    medical_officer: { type: String, required: true },
-    para_medical_staff: { type: String, required: true },
-    store_keeper_accountant: { type: String, required: true },
-    art_craft_music_teacher: { type: String, required: true },
-    pt_instructor_yoga_trainer: { type: String, required: true },
-    driver: { type: String, required: true },
-    cook: { type: String, required: true },
-    helper: { type: String, required: true },
-    house_keeping: { type: String, required: true },
-    security_guard: { type: String, required: true },
-    female_superintendent: { type: String, required: true },
-    training_child_rights_protection: { type: String, required: true },
-    training_care_giving: { type: String, required: true },
-    training_rehabilitation: { type: String, required: true },
-    training_juvenile_justice_act: { type: String, required: true },
-    training_mission_vatsalya: { type: String, required: true },
-    training_orientation_care_givers: { type: String, required: true },
-    training_orientation_children: { type: String, required: true },
-    rehabilitation_placement_officer: { type: String, required: true },
-    any_other: { type: String, required: true },
+    superintendent_manager_incharge: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    person_in_charge: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    counselor: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    child_welfare_officer: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    house_mother_father: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    medical_officer: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    para_medical_staff: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    store_keeper_accountant: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    art_craft_music_teacher: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    pt_instructor_yoga_trainer: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    driver: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    cook: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    helper: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    house_keeping: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    security_guard: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    female_superintendent: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    training_child_rights_protection: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    training_care_giving: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    training_rehabilitation: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    training_juvenile_justice_act: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    training_mission_vatsalya: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    training_orientation_care_givers: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    training_orientation_children: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    rehabilitation_placement_officer: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    any_other: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
   },
+
   functionalityContent: {
-    special_emergency_medical_care_equipment: { type: String, required: true },
-    computer_internet_accessibility: { type: String, required: true },
-    records_stored_safely: { type: String, required: true },
-    essential_details_emergency_numbers: { type: String, required: true },
-    duty_chart: { type: String, required: true },
-    menu_chart: { type: String, required: true },
-    attendance_status: { type: String, required: true },
-    weekly_programme_schedule: { type: String, required: true },
-    safe_transport_facility_education: { type: String, required: true },
-    separate_facilities_children_staff: { type: String, required: true },
-    facilities_support_special_needs: { type: String, required: true },
-    visual_needs: { type: String, required: true },
-    intellectual_needs: { type: String, required: true },
-    hearing_needs: { type: String, required: true },
-    others: { type: String, required: true },
-    rooms_dormitories_free_unstable: { type: String, required: true },
-    privacy_maintained_toilets: { type: String, required: true },
-    emergency_medical_care_equipment: { type: String, required: true },
+    special_emergency_medical_care_equipment: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    computer_internet_accessibility: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    records_stored_safely: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    essential_details_emergency_numbers: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    duty_chart: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    menu_chart: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    attendance_status: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    weekly_programme_schedule: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    safe_transport_facility_education: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    separate_facilities_children_staff: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    facilities_support_special_needs: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    visual_needs: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    intellectual_needs: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    hearing_needs: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    others: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    rooms_dormitories_free_unstable: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    privacy_maintained_toilets: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    emergency_medical_care_equipment: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
   },
+
   multipleContent: {
     market_oriented_education_option_available: {
-      type: String,
-      required: true,
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
     },
-    child_protection_sop: { type: String, required: true },
-    complaint_grievance_mechanism: { type: String, required: true },
-    child_helpline: { type: String, required: true },
-    cctv_cameras: { type: String, required: true },
-    children_committees: { type: String, required: true },
-    staff_children_interface: { type: String, required: true },
-    daily_routine_consultation: { type: String, required: true },
-    daily_routine_display: { type: String, required: true },
-    safe_toys_available: { type: String, required: true },
-    outdoor_play_space: { type: String, required: true },
-    nutritional_requirement_awareness: { type: String, required: true },
-    indoor_recreation_facilities: { type: String, required: true },
-    outdoor_recreation_facilities: { type: String, required: true },
-    innovative_activities_harnessed: { type: String, required: true },
-    clean_clothes_toiletries_available: { type: String, required: true },
-    clean_mats_sleeping_materials: { type: String, required: true },
-    sleeping_material_cleaned: { type: String, required: true },
-    rooms_fumigated_disinfected: { type: String, required: true },
-    secured_space_personal_belongings: { type: String, required: true },
-    fans_available: { type: String, required: true },
-    coolers_available: { type: String, required: true },
-    air_conditioner_available: { type: String, required: true },
-    heaters_for_winter_available: { type: String, required: true },
-    nurse_paramedical_staff_available: { type: String, required: true },
-    staff_trained_first_aid: { type: String, required: true },
+    child_protection_sop: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    complaint_grievance_mechanism: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    child_helpline: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    cctv_cameras: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    children_committees: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    staff_children_interface: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    daily_routine_consultation: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    daily_routine_display: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    safe_toys_available: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    outdoor_play_space: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    nutritional_requirement_awareness: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    indoor_recreation_facilities: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    outdoor_recreation_facilities: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    innovative_activities_harnessed: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    clean_clothes_toiletries_available: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    clean_mats_sleeping_materials: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    sleeping_material_cleaned: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    rooms_fumigated_disinfected: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    secured_space_personal_belongings: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    fans_available: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    coolers_available: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    air_conditioner_available: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    heaters_for_winter_available: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    nurse_paramedical_staff_available: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    staff_trained_first_aid: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
     age_appropriate_education_option_available: {
-      type: String,
-      required: true,
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
     },
   },
+
   record_financial_Content: {
-    bank_accounts_details: { type: String, required: true },
-    admission_discharge_register: { type: String, required: true },
-    supervision_register: { type: String, required: true },
-    medical_file_report: { type: String, required: true },
-    attendance_register: { type: String, required: true },
-    order_book: { type: String, required: true },
-    inquiry_report_file: { type: String, required: true },
-    children_suggestion_book: { type: String, required: true },
-    financial_records: { type: String, required: true },
-    grant_utilization_register: { type: String, required: true },
-    stock_register: { type: String, required: true },
-    nutrition_diet_register: { type: String, required: true },
-    budget_statement_register: { type: String, required: true },
-    visitors_book: { type: String, required: true },
-    staff_movement_register: { type: String, required: true },
-    personal_belonging_register: { type: String, required: true },
-    children_movement_register: { type: String, required: true },
-    funding_info_available: { type: String, required: true },
-    government_aid_grant: { type: String, required: true },
-    national_donors: { type: String, required: true },
-    international_donors_fcra: { type: String, required: true },
-    corporate_donors: { type: String, required: true },
-    own_sources: { type: String, required: true },
-    other_sources: { type: String, required: true },
+    bank_accounts_details: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    admission_discharge_register: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    supervision_register: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    medical_file_report: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    attendance_register: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    order_book: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    inquiry_report_file: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    children_suggestion_book: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    financial_records: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    grant_utilization_register: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    stock_register: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    nutrition_diet_register: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    budget_statement_register: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    visitors_book: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    staff_movement_register: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    personal_belonging_register: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    children_movement_register: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    funding_info_available: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    government_aid_grant: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    national_donors: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    international_donors_fcra: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    corporate_donors: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    own_sources: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    other_sources: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
   },
+
   recommendContent: {
     Date: { type: String, required: true },
     districtDetails: {
@@ -162,7 +1598,18 @@ const form46ASchema = new mongoose.Schema({
       numChildWelfareCommittees: { type: Number, required: true },
       numDistrictInspectionCommittees: { type: String, required: true },
     },
-    registration_recommendation: { type: String, required: true },
+    registration_recommendation: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
     name_of_magistrate: { type: String, required: true },
     name_of_district: { type: String, required: true },
     name_of_state: { type: String, required: true },
