@@ -29,12 +29,12 @@ app.options("*", cors());
 
 app.use(
   cors({
-    // origin: ["https://stately-salamander-7df738.netlify.app/"],
-    origin: "https://stately-salamander-7df738.netlify.app/",
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
+
 app.use(cookieParser());
 
 app.use(formOneRoute);
