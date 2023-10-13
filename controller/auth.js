@@ -42,18 +42,19 @@ exports.signUpPost = async (req, res, next) => {
       const savedUser = await newUser.save();
 
       const token = jwt.sign({ id: savedUser._id }, process.env.TOKEN_KEY);
-      res.cookie("token", token, {
-        expires: oneYearFromNow,
-        secure: true,
-        withCredentials: true,
-        httpOnly: false,
-        sameSite: "none",
-        domain: "netlify.app",
-      });
+      // res.cookie("token", token, {
+      //   expires: oneYearFromNow,
+      //   secure: true,
+      //   withCredentials: true,
+      //   httpOnly: false,
+      //   sameSite: "none",
+      //   domain: "netlify.app",
+      // });
       res.status(201).json({
         message: "User signed in successfully",
         success: true,
         savedUser,
+        token,
       });
     }
   } catch (error) {
@@ -80,18 +81,19 @@ exports.loginPost = async (req, res, next) => {
           .status(400)
           .json({ status: false, message: "Please Enter a Valid Password!" });
       const token = jwt.sign({ id: foundUser._id }, process.env.TOKEN_KEY);
-      res.cookie("token", token, {
-        expires: oneYearFromNow,
-        secure: true,
-        withCredentials: true,
-        httpOnly: false,
-        sameSite: "none",
-        domain: "netlify.app",
-      });
+      // res.cookie("token", token, {
+      //   expires: oneYearFromNow,
+      //   secure: true,
+      //   withCredentials: true,
+      //   httpOnly: false,
+      //   sameSite: "none",
+      //   domain: "netlify.app",
+      // });
       res.status(201).json({
         message: "User signed in successfully",
         success: true,
         foundUser,
+        token,
       });
     }
   } catch (error) {

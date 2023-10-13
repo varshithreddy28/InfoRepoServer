@@ -27,7 +27,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: "https://stately-salamander-7df738.netlify.app",
+    origin: [
+      "https://stately-salamander-7df738.netlify.app",
+      "http://localhost:3001",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
