@@ -29,7 +29,7 @@ app.options("*", cors());
 
 app.use(
   cors({
-    origin: "*",
+    origin: "https://stately-salamander-7df738.netlify.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
