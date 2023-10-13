@@ -48,6 +48,7 @@ exports.signUpPost = async (req, res, next) => {
         withCredentials: true,
         httpOnly: false,
         sameSite: "none",
+        domain: "stately-salamander-7df738.netlify.app",
       });
       res.status(201).json({
         message: "User signed in successfully",
@@ -85,6 +86,7 @@ exports.loginPost = async (req, res, next) => {
         withCredentials: true,
         httpOnly: false,
         sameSite: "none",
+        domain: "stately-salamander-7df738.netlify.app",
       });
       res.status(201).json({
         message: "User signed in successfully",
