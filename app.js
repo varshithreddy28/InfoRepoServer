@@ -24,6 +24,9 @@ mongoose
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.options("*", cors());
+
 app.use(
   cors({
     // origin: ["https://stately-salamander-7df738.netlify.app/"],
