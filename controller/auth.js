@@ -1,6 +1,8 @@
 const User = require("../model/user");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
+const oneYearFromNow = new Date();
+oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
 
 exports.signUpPost = async (req, res, next) => {
   try {
@@ -41,6 +43,7 @@ exports.signUpPost = async (req, res, next) => {
 
       const token = jwt.sign({ id: savedUser._id }, process.env.TOKEN_KEY);
       res.cookie("token", token, {
+        expires: oneYearFromNow,
         secure: true,
         withCredentials: true,
         httpOnly: false,
@@ -77,6 +80,7 @@ exports.loginPost = async (req, res, next) => {
           .json({ status: false, message: "Please Enter a Valid Password!" });
       const token = jwt.sign({ id: foundUser._id }, process.env.TOKEN_KEY);
       res.cookie("token", token, {
+        expires: oneYearFromNow,
         secure: true,
         withCredentials: true,
         httpOnly: false,
