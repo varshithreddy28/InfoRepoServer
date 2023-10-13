@@ -1,12 +1,15 @@
 const express = require("express");
+require("dotenv/config");
 const app = express();
 const path = require("path");
 const pathHelper = require("./utils/pathHelper");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const cookieParser = require("cookie-parser");
 
 // Form's Routes
 const formOneRoute = require("./routes/firstForm");
+const { authRouters } = require("./routes/auth");
 
 mongoose
   .connect(
@@ -21,9 +24,17 @@ mongoose
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://stately-salamander-7df738.netlify.app/"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+app.use(cookieParser());
 
 app.use(formOneRoute);
+app.use(authRouters);
 
 app.listen(3000, () => {
   console.log("Listening on Port 3000");
