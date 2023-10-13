@@ -41,8 +41,10 @@ exports.signUpPost = async (req, res, next) => {
 
       const token = jwt.sign({ id: savedUser._id }, process.env.TOKEN_KEY);
       res.cookie("token", token, {
+        secure: true,
         withCredentials: true,
         httpOnly: false,
+        sameSite: "none",
       });
       res.status(201).json({
         message: "User signed in successfully",
@@ -75,8 +77,10 @@ exports.loginPost = async (req, res, next) => {
           .json({ status: false, message: "Please Enter a Valid Password!" });
       const token = jwt.sign({ id: foundUser._id }, process.env.TOKEN_KEY);
       res.cookie("token", token, {
+        secure: true,
         withCredentials: true,
         httpOnly: false,
+        sameSite: "none",
       });
       res.status(201).json({
         message: "User signed in successfully",
