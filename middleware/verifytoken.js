@@ -2,7 +2,8 @@ const User = require("../model/user");
 const jwt = require("jsonwebtoken");
 
 exports.validateUser = (req, res, next) => {
-  const token = req.cookies.tokenuser;
+  // const token = req.cookies.tokenuser;
+  const token = req.headers.authorization;
   let user = null;
   console.log("Validate User : ");
   console.log(req.cookies);

@@ -41,7 +41,9 @@ exports.signUpPost = async (req, res, next) => {
       });
       const savedUser = await newUser.save();
 
-      const token = jwt.sign({ id: savedUser._id }, process.env.TOKEN_KEY);
+      const token = jwt.sign({ id: savedUser._id }, process.env.TOKEN_KEY, {
+        expiresIn: "99d",
+      });
       // res.cookie("token", token, {
       //   expires: oneYearFromNow,
       //   secure: true,
@@ -80,7 +82,9 @@ exports.loginPost = async (req, res, next) => {
         return res
           .status(400)
           .json({ status: false, message: "Please Enter a Valid Password!" });
-      const token = jwt.sign({ id: foundUser._id }, process.env.TOKEN_KEY);
+      const token = jwt.sign({ id: foundUser._id }, process.env.TOKEN_KEY, {
+        expiresIn: "99d",
+      });
       // res.cookie("token", token, {
       //   expires: oneYearFromNow,
       //   secure: true,
@@ -104,10 +108,7 @@ exports.loginPost = async (req, res, next) => {
 };
 
 exports.validatePost = async (req, res, next) => {
-  const token = req.cookies.tokenuser;
-
-  console.log("Validate User Route");
-  console.log(token);
+  const token = req.headers.authorization;
   if (!token) {
     return res
       .status(401)
