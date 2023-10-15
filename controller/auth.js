@@ -105,6 +105,7 @@ exports.loginPost = async (req, res, next) => {
 
 exports.validatePost = async (req, res, next) => {
   const token = req.cookies.tokenuser;
+  console.log(token);
   if (!token) {
     return res
       .status(401)
