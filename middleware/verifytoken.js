@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 exports.validateUser = (req, res, next) => {
   const token = req.cookies.tokenuser;
   let user = null;
+  console.log(token);
   if (!token) {
     return res
       .status(401)
