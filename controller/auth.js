@@ -104,6 +104,7 @@ exports.loginPost = async (req, res, next) => {
 };
 
 exports.validatePost = async (req, res, next) => {
+  res.header("Access-Control-Allow-Credentials", true);
   const token = req.cookies.tokenuser;
 
   console.log("Validate User Route");
