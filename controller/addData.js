@@ -16,9 +16,9 @@ exports.addDataFormOne = async (req, res, next) => {
 };
 exports.addDataFormTwo = async (req, res, next) => {
   // console.log(req.body);
+  const data = req.body;
+  const formData = new Form46AModel({ ...data });
   try {
-    const data = req.body;
-    const formData = new Form46AModel({ ...data });
     await formData.save();
     res.status(200).json({ message: "Data added successfully" });
   } catch (error) {

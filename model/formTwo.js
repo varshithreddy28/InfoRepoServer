@@ -968,18 +968,6 @@ const form46ASchema = new mongoose.Schema({
   },
 
   multipleContent: {
-    market_oriented_education_option_available: {
-      note: {
-        type: String,
-      },
-      remark: {
-        type: String,
-      },
-      value: {
-        type: String,
-        required: true,
-      },
-    },
     child_protection_sop: {
       note: {
         type: String,
@@ -1100,6 +1088,8 @@ const form46ASchema = new mongoose.Schema({
         required: true,
       },
     },
+  },
+  multipleContent2: {
     nutritional_requirement_awareness: {
       note: {
         type: String,
@@ -1281,6 +1271,18 @@ const form46ASchema = new mongoose.Schema({
       },
     },
     age_appropriate_education_option_available: {
+      note: {
+        type: String,
+      },
+      remark: {
+        type: String,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+    },
+    market_oriented_education_option_available: {
       note: {
         type: String,
       },
@@ -1616,6 +1618,6 @@ const form46ASchema = new mongoose.Schema({
   },
 });
 
-const Form46AModel = mongoose.model("Form46AModel", form46ASchema);
+const Form46AModel = mongoose.model("Form46A", form46ASchema);
 
 module.exports = Form46AModel;
