@@ -11,7 +11,11 @@ const cookieParser = require("cookie-parser");
 const formOneRoute = require("./routes/firstForm");
 const { authRouters } = require("./routes/auth");
 
-app.use(cors());
+app.use(
+  cors({
+    origin: true,
+  })
+);
 
 mongoose
   .connect(
